@@ -1110,7 +1110,8 @@ rgb.c
 int main(int argc, char *argv[])
 {
   int fd_r, fd_g, fd_b;
-  ssize_t bytes_r, bytes_g, bytes_b; char* fifo_r = argv[1];
+  ssize_t bytes_r, bytes_g, bytes_b;
+  char* fifo_r = argv[1];
   char* fifo_g = argv[2];
   char* fifo_b = argv[3];
   int b_size = 1;
