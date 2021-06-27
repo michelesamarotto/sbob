@@ -1,1 +1,1355 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sonic Bits &amp; Optic Bytes (Video Examples)</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Michele Samarotto">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<header>
+<h1 class="title">Sonic Bits &amp; Optic Bytes (Video Examples)</h1>
+</header><p>
+Master's thesis supplementary video documentation.
+</p>
+
+<p>
+Title: <i>Sonic Bits &amp; Optic Bytes. Aesthetic Considerations on and Practical Explorations of Audiovisual Synthesis at Byte-Level via Data Encoding and Unix IPC</i> <br>
+Author: <i>Michele Samarotto</i> <br>
+Supervisors: <i>Prof. Dr. Christoph Seibert, Dr. Bernd Härpfer</i> <br>
+University/Institute: <i>University of Music Karlsruhe / Institute for Music Informatics and Musicology</i> <br>
+Date: <i>June 2021</i>
+</p>
+
+<hr>
+
+<p>
+For browser display, all videos have been transcoded from the original raw-formats using the <i>NUT</i> container to the <i>WebM</i> container using the <i>VP9</i> and <i>Opus</i> codecs and a 2-pass encoding:
+</p>
+
+<p>
+<code>$ ffmpeg -i source.nut -c:v libvpx-vp9 -pass 1 -b:v 0 -crf 15 -pix_fmt yuv420p -threads 8 -speed 4 -tile-columns 6 -frame-parallel 1 -an -f webm /dev/null</code>
+</p>
+
+<p>
+<code>$ ffmpeg -i source.nut -c:v libvpx-vp9 -pass 2 -b:v 0 -crf 15 -pix_fmt yuv420p -threads 8 -speed 2 -tile-columns 6 -frame-parallel 1 -auto-alt-ref 1 -lag-in-frames 25 -c:a libopus -ar 48000 -ac 2 -b:a 320k -f webm out.webm</code>
+</p>
+
+<p>
+See: <a href="https://sites.google.com/a/webmproject.org/wiki/ffmpeg/vp9-encoding-guide" target="_blank">https://sites.google.com/a/webmproject.org/wiki/ffmpeg/vp9-encoding-guide</a>
+</p>
+
+<hr>
+
+<nav id="table-of-contents">
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org7e28c51">Video Encoding (Chapter 3.2.3)</a></li>
+<li><a href="#orgf0a15bc">FM (Chapter 5.1)</a></li>
+<li><a href="#org947cdb0">Sine Wave 689.0625 Hz (Chapter 5.1)</a></li>
+<li><a href="#org1272863">Sine Wave 699.0625 Hz (Chapter 5.1)</a></li>
+<li><a href="#org4c1880e">Marble (Chapter 5.1)</a></li>
+<li><a href="#org71b7a5a">Helvetica (Chapter 5.1)</a></li>
+<li><a href="#orgcf7d083">Bandpass Filter (Chapter 5.2)</a></li>
+<li><a href="#org7365be3">Phaser (Chapter 5.2)</a></li>
+<li><a href="#org64528e8">Pitch shift (Chapter 5.2)</a></li>
+<li><a href="#org59b77fd">Blur (Chapter 5.3)</a></li>
+<li><a href="#org4001373">Brightness (Chapter 5.3)</a></li>
+<li><a href="#org06941c2">Noise Reduction (5.3)</a></li>
+<li><a href="#orgf696c91">JPEG Compression (Chapter 5.3)</a></li>
+<li><a href="#org30d401a">Scaling Noise (Chapter 5.4)</a></li>
+<li><a href="#org2ad3a87">Scaling Sine Wave (Chapter 5.4)</a></li>
+<li><a href="#org7b4dde3">Rotation (Chapter 5.4)</a></li>
+<li><a href="#orgac7f78b">Intra-Frame Interpolation (Chapter 5.4)</a></li>
+<li><a href="#orgb31c2e8">Bitstream Noise (Chapter 5.4)</a></li>
+<li><a href="#orgc2057f9">Multichannel Modulation 1 Hz (Chapter 5.5)</a></li>
+<li><a href="#org1a9c824">Multichannel Modulation 100 Hz (Chapter 5.5)</a></li>
+<li><a href="#orge5d1036">RGB Bit-Shift (Chapter 5.6)</a></li>
+<li><a href="#orgc90f365">Scan Line (Chapter 5.7)</a></li>
+</ul>
+</div>
+</nav>
+
+<hr>
+
+<div id="outline-container-org7e28c51" class="outline-2">
+<h2 id="org7e28c51">Video Encoding (Chapter 3.2.3)</h2>
+<div class="outline-text-2" id="text-org7e28c51">
+<video controls="controls">
+<source src="videos/data.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ head -c 43008 /dev/random &gt; data.raw</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -i data.raw -f u8 -ar 44100 -ac 1 -i data.raw -f nut -c:v rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf ”scale=w=720:h=720:flags=neighbor” data.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-orgf0a15bc" class="outline-2">
+<h2 id="orgf0a15bc">FM (Chapter 5.1)</h2>
+<div class="outline-text-2" id="text-orgf0a15bc">
+<video controls="controls">
+<source src="videos/fm.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkfifo /tmp/tee.fifo /tmp/audio.fifo /tmp/video.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f lavfi -i aevalsrc="'sin((1378.125+sin(200.0*2*PI*t))*2*PI*t)':s=44100" -f u8 -ar 44100 -ac 1 - &lt; /dev/null 2&gt; /dev/null | ffmpeg -f rawvideo -pixel_format rgb24 -video_size 32x32 -i - -f rawvideo -pixel_format rgb24 -video_size 32x32 - &gt; /tmp/tee.fifo 2&gt; /dev/null &amp;</code>
+</p>
+
+<p>
+<code>$ tee &lt; /tmp/tee.fifo &gt;(pv -pterbTCB 5M | cat - &gt; /tmp/video.fifo) | pv -pterbTCB 5M | cat - &gt; /tmp/audio.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:01:00 fm.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-org947cdb0" class="outline-2">
+<h2 id="org947cdb0">Sine Wave 689.0625 Hz (Chapter 5.1)</h2>
+<div class="outline-text-2" id="text-org947cdb0">
+<video controls="controls">
+<source src="videos/spatial_frequency_01.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkfifo /tmp/tee.fifo /tmp/audio.fifo /tmp/video.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f lavfi -i aevalsrc="sin(689.0625*2*PI*t):s=44100" -f u8 -ar 44100 -ac 1 - &lt; /dev/null 2&gt; /dev/null | ffmpeg -f rawvideo -pixel_format gray -video_size 64x64 -i - -f rawvideo -pixel_format gray -video_size 64x64 - &gt; /tmp/tee.fifo 2&gt; /dev/null</code>
+</p>
+
+<p>
+<code>$ tee &lt; /tmp/tee.fifo &gt;(pv -pterbTCB 5M | cat - &gt; /tmp/video.fifo) | pv -pterbTCB 5M | cat - &gt; /tmp/audio.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f rawvideo -pixel_format gray -video_size 64x64 -framerate 10.7666015625 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format gray -video_size 64x64 -framerate 10.7666015625 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:00:05 spatial_frequency_01.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-org1272863" class="outline-2">
+<h2 id="org1272863">Sine Wave 699.0625 Hz (Chapter 5.1)</h2>
+<div class="outline-text-2" id="text-org1272863">
+<video controls="controls">
+<source src="videos/spatial_frequency_02.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkfifo /tmp/tee.fifo /tmp/audio.fifo /tmp/video.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f lavfi -i aevalsrc="sin(699.0625*2*PI*t):s=44100" -f u8 -ar 44100 -ac 1 - &lt; /dev/null 2&gt; /dev/null | ffmpeg -f rawvideo -pixel_format gray -video_size 64x64 -i - -f rawvideo -pixel_format gray -video_size 64x64 - &gt; /tmp/tee.fifo 2&gt; /dev/null</code>
+</p>
+
+<p>
+<code>$ tee &lt; /tmp/tee.fifo &gt;(pv -pterbTCB 5M | cat - &gt; /tmp/video.fifo) | pv -pterbTCB 5M | cat - &gt; /tmp/audio.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f rawvideo -pixel_format gray -video_size 64x64 -framerate 10.7666015625 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format gray -video_size 64x64 -framerate 10.7666015625 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:00:05 spatial_frequency_02.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-org4c1880e" class="outline-2">
+<h2 id="org4c1880e">Marble (Chapter 5.1)</h2>
+<div class="outline-text-2" id="text-org4c1880e">
+<video controls="controls">
+<source src="videos/marble.webm" type="video/webm">
+</video>
+
+<p>
+<b>Note</b>: Commands are run from within the sketch folder.
+</p>
+
+<p>
+<code>$ mkdir frames</code>
+</p>
+
+<p>
+Run the <i>marble.pde</i> sketch <sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>
+</p>
+
+<p>
+<code>$ cd frames</code>
+</p>
+
+<p>
+<code>$ (ls -1 * | sort -V) &gt; ../frame_list.txt</code>
+</p>
+
+<p>
+<code>$ while read -r line; do cat $line &gt;&gt; ../frames.raw; done &lt; ../frame_list.txt</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f rawvideo -pixel_format gray -video_size 32x32 -framerate 43.06640625 -thread_queue_size 512 -i ../frames.raw -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i ../frames.raw -f nut -c:v rawvideo -pixel_format gray -video_size 32x32 -framerate 43.06640625 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:01:00 ../marble.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-org71b7a5a" class="outline-2">
+<h2 id="org71b7a5a">Helvetica (Chapter 5.1)</h2>
+<div class="outline-text-2" id="text-org71b7a5a">
+<video controls="controls">
+<source src="videos/helvetica.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkfifo /tmp/tee.fifo /tmp/audio.fifo /tmp/video.fifo</code>
+</p>
+
+<p>
+<code>$ cat Helvetica.ttc &gt; /tmp/tee.fifo &amp;</code>
+</p>
+
+<p>
+<code>$ tee &lt; /tmp/tee.fifo &gt;(pv -pterbTCB 5M | cat - &gt; /tmp/video.fifo) | pv -pterbTCB 5M | cat - &gt; /tmp/audio.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=neighbor" -t 00:01:00 helvetica.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-orgcf7d083" class="outline-2">
+<h2 id="orgcf7d083">Bandpass Filter (Chapter 5.2)</h2>
+<div class="outline-text-2" id="text-orgcf7d083">
+<video controls="controls">
+<source src="videos/bandpass.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkfifo /tmp/tee.fifo /tmp/audio.fifo /tmp/video.fifo</code>
+</p>
+
+<p>
+<code>$ counter=0</code>
+</p>
+
+<p>
+<code>$ while True; do head -c 3072 /dev/random | sox -t raw -r 44100 -b 8 -c 1 -L -e unsigned-integer - -t raw -r 44100 -b 8 -c 1 -L -e unsigned-integer - bandpass 500 $counter &gt; /tmp/tee.fifo 2&gt; /dev/null; counter=$(bc &lt;&lt;&lt;"($counter + 20) % 5000"); done &amp;</code>
+</p>
+
+<p>
+<code>$ cat &gt; /tmp/tee.fifo &amp;</code>
+</p>
+
+<p>
+<code>$ tee &lt; /tmp/tee.fifo &gt;(pv -pterbTCB 5M | cat - &gt; /tmp/video.fifo) | pv -pterbTCB 5M | cat - &gt; /tmp/audio.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:00:40 bandpass.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-org7365be3" class="outline-2">
+<h2 id="org7365be3">Phaser (Chapter 5.2)</h2>
+<div class="outline-text-2" id="text-org7365be3">
+<video controls="controls">
+<source src="videos/phaser.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkfifo /tmp/tee.fifo /tmp/audio.fifo /tmp/video.fifo</code>
+</p>
+
+<p>
+<code>$ counter=0</code>
+</p>
+
+<p>
+<code>$ while True; do head -c 3072 /dev/random | sox -t raw -r 44100 -b 8 -c 1 -L -e unsigned-integer - -t raw -r 44100 -b 8 -c 1 -L -e unsigned-integer - phaser 0.9 0.85 0.1 $counter 0.5 -s &gt; /tmp/tee.fifo 2&gt; /dev/null; counter=$(bc &lt;&lt;&lt;"($counter + 0.01) % 1"); done &amp;</code>
+</p>
+
+<p>
+<code>$ cat &gt; /tmp/tee.fifo &amp;</code>
+</p>
+
+<p>
+<code>$ tee &lt; /tmp/tee.fifo &gt;(pv -pterbTCB 5M | cat - &gt; /tmp/video.fifo) | pv -pterbTCB 5M | cat - &gt; /tmp/audio.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -fflags nobuffer -f rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:00:30 phaser.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-org64528e8" class="outline-2">
+<h2 id="org64528e8">Pitch shift (Chapter 5.2)</h2>
+<div class="outline-text-2" id="text-org64528e8">
+<video controls="controls">
+<source src="videos/pitch_shift.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkfifo /tmp/tee.fifo /tmp/audio.fifo /tmp/video.fifo</code>
+</p>
+
+<p>
+<code>$ counter=0</code>
+</p>
+
+<p>
+<code>$ while True; do head -c 3072 /dev/random | sox -t raw -r 44100 -b 8 -c 1 -L -e unsigned-integer - -t raw -r 44100 -b 8 -c 1 -L -e unsigned-integer - pitch $counter &gt; /tmp/tee.fifo 2&gt; /dev/null; counter=$(bc &lt;&lt;&lt;"($counter + 50) % 10000"); done &amp;</code>
+</p>
+
+<p>
+<code>$ cat &gt; /tmp/tee.fifo &amp;</code>
+</p>
+
+<p>
+<code>$ tee &lt; /tmp/tee.fifo &gt;(pv -pterbTCB 5M | cat - &gt; /tmp/video.fifo) | pv -pterbTCB 5M | cat - &gt; /tmp/audio.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -fflags nobuffer -f rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:00:20 pitch_shift.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-org59b77fd" class="outline-2">
+<h2 id="org59b77fd">Blur (Chapter 5.3)</h2>
+<div class="outline-text-2" id="text-org59b77fd">
+<video controls="controls">
+<source src="videos/blur.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkfifo /tmp/tee.fifo /tmp/audio.fifo /tmp/video.fifo</code>
+</p>
+
+<p>
+<code>$ counter=0</code>
+</p>
+
+<p>
+<code>$ while True; do head -c 3072 /dev/random | convert -size 32x32 -depth 8 RGB:- -blur 0x$counter -size 32x32 -depth 8 RGB:- &gt; /tmp/tee.fifo 2&gt; /dev/null; counter=$(bc &lt;&lt;&lt;"($counter + 0.01) % 4"); done &amp;</code>
+</p>
+
+<p>
+<code>cat &gt; /tmp/tee.fifo &amp;</code>
+</p>
+
+<p>
+<code>$ tee &lt; /tmp/tee.fifo &gt;(pv -pterbTCB 5M | cat - &gt; /tmp/video.fifo) | pv -pterbTCB 5M | cat - &gt; /tmp/audio.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:00:50 blur.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-org4001373" class="outline-2">
+<h2 id="org4001373">Brightness (Chapter 5.3)</h2>
+<div class="outline-text-2" id="text-org4001373">
+<video controls="controls">
+<source src="videos/brightness.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkfifo /tmp/tee.fifo /tmp/audio.fifo /tmp/video.fifo</code>
+</p>
+
+<p>
+<code>$ counter=0</code>
+</p>
+
+<p>
+<code>$ while True; do head -c 3072 /dev/random | convert -size 32x32 -depth 8 RGB:- -brightness-contrast $counter -size 32x32 -depth 8 RGB:- &gt; /tmp/tee.fifo 2&gt; /dev/null; counter=$(bc &lt;&lt;&lt;"($counter + 1) % 100"); done &amp;</code>
+</p>
+
+<p>
+<code>$ cat &gt; /tmp/tee.fifo &amp;</code>
+</p>
+
+<p>
+<code>$ tee &lt; /tmp/tee.fifo &gt;(pv -pterbTCB 5M | cat - &gt; /tmp/video.fifo) | pv -pterbTCB 5M | cat - &gt; /tmp/audio.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:00:20 brightness.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-org06941c2" class="outline-2">
+<h2 id="org06941c2">Noise Reduction (5.3)</h2>
+<div class="outline-text-2" id="text-org06941c2">
+<video controls="controls">
+<source src="videos/noise_reduction.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkfifo /tmp/tee.fifo /tmp/audio.fifo /tmp/video.fifo</code>
+</p>
+
+<p>
+<code>$ counter=0</code>
+</p>
+
+<p>
+<code>$ while True; do head -c 3072 /dev/random | convert -size 32x32 -depth 8 RGB:- -mean-shift 7x7+$counter% -size 32x32 -depth 8 RGB:- &gt; /tmp/tee.fifo 2&gt; /dev/null; counter=$(bc &lt;&lt;&lt;"($counter + 1) % 99"); done &amp;</code>
+</p>
+
+<p>
+<code>$ cat &gt; /tmp/tee.fifo &amp;</code>
+</p>
+
+<p>
+<code>$ tee &lt; /tmp/tee.fifo &gt;(pv -pterbTCB 5M | cat - &gt; /tmp/video.fifo) | pv -pterbTCB 5M | cat - &gt; /tmp/audio.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:00:20 noise_reduction.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-orgf696c91" class="outline-2">
+<h2 id="orgf696c91">JPEG Compression (Chapter 5.3)</h2>
+<div class="outline-text-2" id="text-orgf696c91">
+<video controls="controls">
+<source src="videos/JPEG_compression.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkfifo /tmp/tee.fifo /tmp/audio.fifo /tmp/video.fifo</code>
+</p>
+
+<p>
+<code>$ counter=0</code>
+</p>
+
+<p>
+<code>$ while True; do head -c 12288 /dev/random | convert -size 64x64 -depth 8 RGB:- -quality $counter JPEG:- &gt; /tmp/tee.fifo 2&gt; /dev/null; counter=$(bc &lt;&lt;&lt;"($counter + 1) % 100"); done &amp;</code>
+</p>
+
+<p>
+<code>$ cat &gt; /tmp/tee.fifo &amp;</code>
+</p>
+
+<p>
+<code>$ tee &lt; /tmp/tee.fifo &gt;(pv -pterbTCB 5M | cat - &gt; /tmp/video.fifo) | pv -pterbTCB 5M | cat - &gt; /tmp/audio.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -fflags nobuffer -f rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:00:30 JPEG_compression.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-org30d401a" class="outline-2">
+<h2 id="org30d401a">Scaling Noise (Chapter 5.4)</h2>
+<div class="outline-text-2" id="text-org30d401a">
+<video controls="controls">
+<source src="videos/scale_noise.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkfifo /tmp/tee.fifo /tmp/audio.fifo /tmp/video.fifo</code>
+</p>
+
+<p>
+<code>$ cat /dev/random | ffmpeg -f rawvideo -pixel_format gray -video_size 64x64 -i - -vf "scale=eval=frame:w='mod(n, iw)':h='mod(n, ih)',scale=w=iw:h=ih" -f rawvideo -pixel_format gray -sws_flags neighbor -s 64x64 - &gt; /tmp/tee.fifo 2&gt; /dev/null &amp;</code>
+</p>
+
+<p>
+<code>$ tee &lt; /tmp/tee.fifo &gt;(pv -pterbTCB 5M | cat - &gt; /tmp/video.fifo) | pv -pterbTCB 5M | cat - &gt; /tmp/audio.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:00:20 scale_noise.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-org2ad3a87" class="outline-2">
+<h2 id="org2ad3a87">Scaling Sine Wave (Chapter 5.4)</h2>
+<div class="outline-text-2" id="text-org2ad3a87">
+<video controls="controls">
+<source src="videos/scale_sine.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkfifo /tmp/tee.fifo /tmp/audio.fifo /tmp/video.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f lavfi -i aevalsrc="sin(689.0625*2*PI*t):s=44100" -f u8 -ar 44100 -ac 1 - &lt; /dev/null 2&gt; /dev/null | ffmpeg -f rawvideo -pixel_format gray -video_size 64x64 -i - -vf "scale=eval=frame:w='mod(n, iw)':h='mod(n, ih)',scale=w=iw:h=ih" -f rawvideo -pixel_format gray -video_size 64x64 - &gt; /tmp/tee.fifo 2&gt; /dev/null &amp;</code>
+</p>
+
+<p>
+<code>$ tee &lt; /tmp/tee.fifo &gt;(pv -pterbTCB 5M | cat - &gt; /tmp/video.fifo) | pv -pterbTCB 5M | cat - &gt; /tmp/audio.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:00:20 scale_noise.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-org7b4dde3" class="outline-2">
+<h2 id="org7b4dde3">Rotation (Chapter 5.4)</h2>
+<div class="outline-text-2" id="text-org7b4dde3">
+<video controls="controls">
+<source src="videos/rotation.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkfifo /tmp/tee.fifo /tmp/audio.fifo /tmp/video.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f lavfi -i aevalsrc="sin(689.0625*2*PI*t):s=44100" -f u8 -ar 44100 -ac 1 - &lt; /dev/null 2&gt; /dev/null | ffmpeg -f rawvideo -pixel_format gray -video_size 32x32 -i - -vf "rotate=angle=PI/7*t" -f rawvideo -pixel_format gray -video_size 32x32 - &gt; /tmp/tee.fifo 2&gt; /dev/null &amp;</code>
+</p>
+
+<p>
+<code>$ tee &lt; /tmp/tee.fifo &gt;(pv -pterbTCB 5M | cat - &gt; /tmp/video.fifo) | pv -pterbTCB 5M | cat - &gt; /tmp/audio.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f rawvideo -pixel_format gray -video_size 32x32 -framerate 43.06640625 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format gray -video_size 32x32 -framerate 43.06640625 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:00:20 rotation.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-orgac7f78b" class="outline-2">
+<h2 id="orgac7f78b">Intra-Frame Interpolation (Chapter 5.4)</h2>
+<div class="outline-text-2" id="text-orgac7f78b">
+<video controls="controls">
+<source src="videos/frame_interpolation.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkfifo /tmp/tee.fifo /tmp/audio.fifo /tmp/video.fifo</code>
+</p>
+
+<p>
+<code>$ cat /dev/random | ffmpeg -f rawvideo -pixel_format rgb24 -video_size 32x32 -i - -vf "setpts=20*PTS,minterpolate='fps=15:scd=none:me_mode=bidir:vsbmc=1:search_param=200'" -f rawvideo -pixel_format RGB24 -video_size 32x32 - &gt; /tmp/tee.fifo 2&gt; /dev/null &amp;</code>
+</p>
+
+<p>
+<code>$ tee &lt; /tmp/tee.fifo &gt;(pv -pterbTCB 5M | cat - &gt; /tmp/video.fifo) | pv -pterbTCB 5M | cat - &gt; /tmp/audio.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:00:20 frame_interpolation.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-orgb31c2e8" class="outline-2">
+<h2 id="orgb31c2e8">Bitstream Noise (Chapter 5.4)</h2>
+<div class="outline-text-2" id="text-orgb31c2e8">
+<video controls="controls">
+<source src="videos/bitstream_noise.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkfifo /tmp/tee.fifo /tmp/audio.fifo /tmp/video.fifo</code>
+</p>
+
+<p>
+<code>$ counter=0</code>
+</p>
+
+<p>
+<code>$ while True; do ffmpeg -f lavfi -i aevalsrc="sin(1378.125*2*PI*t):s=44100" -f u8 -ar 44100 -ac 1 - &lt; /dev/null 2&gt; /dev/null | head -c 3072 | ffmpeg -f rawvideo -pixel_format rgb24 -video_size 32x32 -i - -bsf noise=$counter -f rawvideo -pixel_format rgb24 -video_size 32x32 - &gt; /tmp/tee.fifo 2&gt; /dev/null; counter=$(bc &lt;&lt;&lt;"($counter + 1) % 20"); done &amp;</code>
+</p>
+
+<p>
+<code>$ cat &gt; /tmp/tee.fifo &amp;</code>
+</p>
+
+<p>
+<code>$ tee &lt; /tmp/tee.fifo &gt;(pv -pterbTCB 5M | cat - &gt; /tmp/video.fifo) | pv -pterbTCB 5M | cat - &gt; /tmp/audio.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:00:10 bitstream_noise.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-orgc2057f9" class="outline-2">
+<h2 id="orgc2057f9">Multichannel Modulation 1 Hz (Chapter 5.5)</h2>
+<div class="outline-text-2" id="text-orgc2057f9">
+<video controls="controls">
+<source src="videos/multichannel_modulation_1hz.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkfifo /tmp/tee.fifo /tmp/audio.fifo /tmp/video.fifo</code>
+</p>
+
+<p>
+<code>$ mkfifo /tmp/r.fifo /tmp/g.fifo /tmp/b.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f lavfi -i aevalsrc="sin(1378.125*2*PI*t):s=44100" -f u8 -ar 44100 -ac 1 - &gt; /tmp/r.fifo &lt; /dev/null 2&gt; /dev/null &amp;</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f lavfi -i aevalsrc="sin(1379.125*2*PI*t):s=44100" -f u8 -ar 44100 -ac 1 - &gt; /tmp/g.fifo &lt; /dev/null 2&gt; /dev/null &amp;</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f lavfi -i aevalsrc="sin(1380.125*2*PI*t):s=44100" -f u8 -ar 44100 -ac 1 - &gt; /tmp/b.fifo &lt; /dev/null 2&gt; /dev/null &amp;</code>
+</p>
+
+<p>
+<code>$ ./rgb "/tmp/r.fifo" "/tmp/g.fifo" "/tmp/b.fifo" &gt; /tmp/tee.fifo &amp;</code> <sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>
+</p>
+
+<p>
+<code>$ tee &lt; /tmp/tee.fifo &gt;(pv -pterbTCB 5M | cat - &gt; /tmp/video.fifo) | pv -pterbTCB 5M | cat - &gt; /tmp/audio.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 43.06640625 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 3 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 43.06640625 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:00:20 multichannel_modulation_1Hz.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-org1a9c824" class="outline-2">
+<h2 id="org1a9c824">Multichannel Modulation 100 Hz (Chapter 5.5)</h2>
+<div class="outline-text-2" id="text-org1a9c824">
+<video controls="controls">
+<source src="videos/multichannel_modulation_100hz.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkfifo /tmp/tee.fifo /tmp/audio.fifo /tmp/video.fifo</code>
+</p>
+
+<p>
+<code>$ mkfifo /tmp/r.fifo /tmp/g.fifo /tmp/b.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f lavfi -i aevalsrc="sin(1378.125*2*PI*t):s=44100" -f u8 -ar 44100 -ac 1 - &gt; /tmp/r.fifo &lt; /dev/null 2&gt; /dev/null &amp;</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f lavfi -i aevalsrc="sin(1478.125*2*PI*t):s=44100" -f u8 -ar 44100 -ac 1 - &gt; /tmp/g.fifo &lt; /dev/null 2&gt; /dev/null &amp;</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f lavfi -i aevalsrc="sin(1578.125*2*PI*t):s=44100" -f u8 -ar 44100 -ac 1 - &gt; /tmp/b.fifo &lt; /dev/null 2&gt; /dev/null &amp;</code>
+</p>
+
+<p>
+<code>$ ./rgb "/tmp/r.fifo" "/tmp/g.fifo" "/tmp/b.fifo" &gt; /tmp/tee.fifo &amp;</code> <sup><a id="fnr.2.100" class="footref" href="#fn.2">2</a></sup>
+</p>
+
+<p>
+<code>$ tee &lt; /tmp/tee.fifo &gt;(pv -pterbTCB 5M | cat - &gt; /tmp/video.fifo) | pv -pterbTCB 5M | cat - &gt; /tmp/audio.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 43.06640625 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 3 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 43.06640625 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:00:20 multichannel_modulation_100Hz.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<div id="outline-container-orge5d1036" class="outline-2">
+<h2 id="orge5d1036">RGB Bit-Shift (Chapter 5.6)</h2>
+<div class="outline-text-2" id="text-orge5d1036">
+<video controls="controls">
+<source src="videos/RGB_bit-shift.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkfifo /tmp/tee.fifo /tmp/audio.fifo /tmp/video.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f lavfi -i aevalsrc="sin(1378.125*2*PI*t):s=44100" -f u8 -ar 44100 -ac 1 - &lt; /dev/null 2&gt; /dev/null | ./zeros 2 | ./shifter 24 0 1 &gt; /tmp/tee.fifo &amp;</code> <sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup><sup>, </sup><sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup>
+</p>
+
+<p>
+<code>$ tee &lt; /tmp/tee.fifo &gt;(pv -pterbTCB 5M | cat - &gt; /tmp/video.fifo) | pv -pterbTCB 5M | cat - &gt; /tmp/audio.fifo</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:00:10 RGB_bit-shift.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+<div id="outline-container-orgc90f365" class="outline-2">
+<h2 id="orgc90f365">Scan Line (Chapter 5.7)</h2>
+<div class="outline-text-2" id="text-orgc90f365">
+<video controls="controls">
+<source src="videos/scan_line.webm" type="video/webm">
+</video>
+
+<p>
+<code>$ mkdir frames</code>
+</p>
+
+<p>
+<code>$ bash filler.sh</code> <sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup>
+</p>
+
+<p>
+<code>$ cd frames</code>
+</p>
+
+<p>
+<code>$ (ls -1 * | sort -V) &gt; ../frame_list.txt</code>
+</p>
+
+<p>
+<code>$ while read -r line; do cat $line &gt;&gt; ../frames.raw; done &lt; ../frame_list.txt</code>
+</p>
+
+<p>
+<code>$ ffmpeg -f rawvideo -pixel_format gray -video_size 720x720 -framerate 30 -thread_queue_size 512 -i ../frames.raw -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i ../Helvetica.ttc -f nut -c:v rawvideo -pixel_format gray -video_size 720x720 -framerate 30 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 ../scan_line.nut</code>
+</p>
+
+<hr>
+</div>
+</div>
+<div id="footnotes">
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+marble.pde
+</p>
+<div class="org-src-container">
+<pre class="src src-java">int c;
+int file_count = 0;
+float freq = 64.0;
+float amp = 100.0;
+float x_inc = 0.01;
+float y_inc = 0.01;
+float pixel_size = 0.1;
+byte[] bytes;
+String out_dir = ”frames/frame”;
+
+void setup() {
+  bytes = new byte[32 * 32];
+  size(32, 32, P3D);
+  background(0);
+}
+
+void draw() {
+  float x_off = 0.0;
+
+  loadPixels();
+
+  for (int x = 0; x &lt; width; x++) { 
+    float y_off = 0.0;
+
+    for (int y = 0; y &lt; height; y++) {
+
+      c = stripe_turbulence(x, x_off, y_off, freq, pixel_size, amp);
+
+      pixels[x + y * width] = color(c);
+      bytes[x + y * width] = byte(c);
+
+      y_off += y_inc;
+    }
+
+    x_off += x_inc;
+  }
+
+  updatePixels();
+  saveBytes(out_dir + file_count, bytes);
+
+  amp += 1.0;
+  println(file_count);
+
+  file_count += 1;
+}
+
+float turbulence(float x, float y, float pixel_size) {
+  float t = 0;
+  float scale = 1;
+
+  while (scale &gt; pixel_size) {
+    t += abs(noise(x / scale, y / scale) * scale); scale /= 2;
+  }
+
+  return t;
+}
+
+int stripe_turbulence(int x, float x_off, float y_off, float freq, float pixel_size, float amp) {
+  float t;
+
+  t = (1 + cos((PI * (x + turbulence(x_off, y_off, pixel_size) * amp)) /freq)) / 2;
+
+  return int((1 - t) * 255);
+}
+</pre>
+</div>
+
+<p class="footpara">
+Implementation of a method proposed by Ken Perlin for the generation of marble-like structures. <br>
+</p>
+
+<p class="footpara">
+See: <i>Ken Perlin: An image synthesizer, in: ACM Siggraph Computer Graphics Vol. 19, Issue 3 (July 1985), pp. 287 –296.</i>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+rgb.c
+</p>
+
+<div class="org-src-container">
+<pre class="src src-C">#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;math.h&gt;
+
+#define TRUE 1
+#define FALSE 0
+
+int main(int argc, char *argv[])
+{
+  int fd_r, fd_g, fd_b;
+  ssize_t bytes_r, bytes_g, bytes_b; char* fifo_r = argv[1];
+  char* fifo_g = argv[2];
+  char* fifo_b = argv[3];
+  int b_size = 1;
+  unsigned char buffer_r[b_size], buffer_g[b_size], buffer_b[b_size];
+
+  setbuf(stdout, NULL);
+
+  fd_r = open(fifo_r, O_RDONLY);
+  fd_g = open(fifo_g, O_RDONLY);
+  fd_b = open(fifo_b, O_RDONLY);
+
+  if(fd_r == -1) {
+    perror(”error opening R fifo”);
+    exit(EXIT_FAILURE);
+  }
+
+  if(fd_g == -1) {
+    perror(”error opening G fifo”);
+    exit(EXIT_FAILURE);
+  }
+
+  if(fd_b == -1) {
+    perror(”error opening B fifo”);
+    exit(EXIT_FAILURE);
+  }
+
+  while(TRUE) {
+
+    bytes_r = read(fd_r, buffer_r, b_size);
+    bytes_g = read(fd_g, buffer_g, b_size);
+    bytes_b = read(fd_b, buffer_b, b_size);
+
+    if(bytes_r == -1) {
+      perror(”error reading R channel”);
+      exit(EXIT_FAILURE);
+    }
+
+    if(bytes_g == -1) {
+      perror(”error reading G channel”);
+      exit(EXIT_FAILURE);
+    }
+
+    if(bytes_b == -1) {
+      perror(”error reading B channel”);
+      exit(EXIT_FAILURE);
+    }
+
+    for(int i = 0; i &lt; b_size; i++) {
+      putchar(buffer_r[i]);
+      putchar(buffer_g[i]);
+      putchar(buffer_b[i]);
+    } 
+  }
+
+  return 0; 
+}
+</pre>
+</div></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
+zeros.c
+</p>
+
+<div class="org-src-container">
+<pre class="src src-C">#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define TRUE 1
+
+int main(int argc, char *argv[])
+{
+  int append = atoi(argv[1]);
+  int b_size = 1;
+  unsigned char buffer[b_size];
+
+  setbuf(stdout, NULL);
+
+  while(TRUE) {
+
+    ssize_t bytes = read(STDIN_FILENO, buffer, b_size);
+
+    if(bytes == -1) {
+      perror(”error reading stdin”);
+      exit(EXIT_FAILURE);
+    }
+
+    for(int i = 0; i &lt; b_size; i++) {
+      putchar(buffer[i]);
+
+      for(int i = 0; i &lt; append; i++) {
+	putchar(0);
+      } 
+    }
+  }
+
+  return 0;
+}
+</pre>
+</div></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4">4</a></sup> <div class="footpara"><p class="footpara">
+shifter.c
+</p>
+
+<div class="org-src-container">
+<pre class="src src-C">#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;math.h&gt;
+
+#define TRUE 1
+#define FALSE 0
+
+int main(int argc, char *argv[])
+{
+  int num_bits = atoi(argv[1]);
+  int b_size = num_bits / 8;
+  int num_shift = atoi(argv[2]), tmp_shift;
+  int inc = atoi(argv[3]);
+  int out = FALSE;
+  int n = 0;
+  unsigned char buffer[b_size];
+  unsigned char carry = 0, n_carry = 0;
+
+  setbuf(stdout, NULL);
+
+  while(TRUE) {
+
+    ssize_t bytes = read(STDIN_FILENO, buffer, b_size);
+
+    if(bytes == -1) {
+      perror(”error reading stdin”);
+      exit(EXIT_FAILURE);
+    }
+
+    if(inc &gt; 0) {
+      if(n == (32 * 32 * b_size)) { num_shift += 1; n = 0; };
+      if(num_shift == (24 + 1)) { num_shift = 0; };
+
+      n += bytes;
+    }
+
+    if(num_shift != 0) {
+
+      for(int i = 0; i &lt; ceil(num_shift / 8.0); i++) {
+
+	if (i == (ceil(num_shift / 8.0) - 1)) { 
+	  if ((num_shift % 8) != 0) {
+	    tmp_shift = num_shift % 8;
+	  }
+	  else{          
+	    tmp_shift = 8;
+	  }
+	  out = TRUE; 
+	}
+	else {
+	  tmp_shift = 8;
+	}
+
+	for(int i = 0; i &lt; b_size; i++) {
+	  n_carry = buffer[i] &lt;&lt; (8 - tmp_shift);
+	  buffer[i] = (buffer[i] &gt;&gt; tmp_shift) | carry; 
+	  carry = n_carry;
+
+	  if (out) { putchar(buffer[i]); }; 
+	}
+
+	carry = 0;
+	n_carry = 0;
+	out = FALSE;
+      } 
+    }
+    else {
+      for(int i = 0; i &lt; b_size; i++) {
+	putchar(buffer[i]);
+      }
+    } 
+  }
+
+ return 0; 
+}
+</pre>
+</div></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5">5</a></sup> <div class="footpara"><p class="footpara">
+filler.sh
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">file=./Helvetica.ttc
+fileSize=$(stat -f%z $file)
+sr=44100
+fr=30
+vWidth=720
+vHeight=720
+dWidth=$vWidth
+dHeight=$vHeight
+numPixD=$(($dWidth * $dHeight))
+smpPerFrame=$(($sr / $fr))
+fillD=$(($numPixD / $smpPerFrame))
+skipD=$(($fillD * $smpPerFrame))
+numIter=$(($fileSize / $smpPerFrame))
+
+for (( i = 0; i &lt;= $numIter; i++ ))
+do
+  currPixMul=$(($i % $fillD))
+  currPixCount=$(($smpPerFrame * ($currPixMul + 1)))
+  currPixFill=$(($numPixD - $currPixCount))
+
+  if [ $i -eq 0 ]
+  then
+    offset=0
+  elif [ $currPixMul -eq 0 ]
+  then
+    offset=$(($offset + $skipD))
+  fi
+
+  tail -c +$offset $file | head -c $currPixCount &gt;&gt; ./frames/frame$i.raw
+  head -c $currPixFill /dev/zero &gt;&gt; ./frames/frame$i.raw
+
+  total=$(($currPixCount + $currPixFill))
+
+  printf ”\nwritten frame$i\n”
+done
+
+printf ”\ndone\n\n” 
+</pre>
+</div>
+
+<hr></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 27.1 (<a href="https://orgmode.org">Org</a> mode 9.3)</p>
+</div>
+</body>
+</html>
