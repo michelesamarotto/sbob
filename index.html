@@ -762,7 +762,7 @@ Run the <i>marble.pde</i> sketch <sup><a id="fnr.1" class="footref" href="#fn.1"
 </p>
 
 <p>
-<code>$ ffmpeg -f rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:00:20 scale_noise.nut</code>
+<code>$ ffmpeg -f rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -thread_queue_size 512 -i /tmp/video.fifo -f u8 -ar 44100 -ac 1 -thread_queue_size 512 -i /tmp/audio.fifo -f nut -c:v rawvideo -pixel_format rgb24 -video_size 32x32 -framerate 14.35546875 -c:a pcm_u8 -sample_fmt u8 -ar 44100 -ac 1 -vf "scale=w=720:h=720:flags=bicubic" -t 00:00:20 scale_sine.nut</code>
 </p>
 
 <hr>
